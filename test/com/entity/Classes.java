@@ -1,12 +1,17 @@
 package com.entity;
 
+/**
+ * 普通的javabean
+ * @author dhc
+ *
+ */
 public class Classes {
-	private int clsId;
+	private String clsId;
 	private String clsName;
-	public int getClsId() {
+	public String getClsId() {
 		return clsId;
 	}
-	public void setClsId(int clsId) {
+	public void setClsId(String clsId) {
 		this.clsId = clsId;
 	}
 	public String getClsName() {
@@ -19,5 +24,6 @@ public class Classes {
 	public String toString() {
 		return "Classes [clsId=" + clsId + ", clsName=" + clsName + "]";
 	}
+	
 	
 }

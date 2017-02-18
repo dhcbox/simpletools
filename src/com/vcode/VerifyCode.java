@@ -71,7 +71,7 @@ public class VerifyCode {
 		Graphics2D g2 = (Graphics2D) image.getGraphics();
 		StringBuilder sb = new StringBuilder();
 		// 向图片中画4个字符
-		for (int i = 0; i < 6; i++) {
+		for (int i = 0; i < 4; i++) {
 			String s = randomChar() + "";
 			sb.append(s);
 			float x = i * 1.0F * w / 4;
