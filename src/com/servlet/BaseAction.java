@@ -76,12 +76,12 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
 		return session;
 	}
 	
-	protected int getPageNumber(HttpServletRequest request) {
+	protected int getPageNumber() {
 		int i = 0;
 		try {
 			//当前台页面没有传递pageNumber,默认为1
 			i = 1;
-			String pageNumberStr = request.getParameter("pageNumber");
+			String pageNumberStr = this.getRequest().getParameter("pageNumber");
 			if(StrKit.notBlank(pageNumberStr)){
 				i = Integer.parseInt(pageNumberStr);
 			}
@@ -92,7 +92,8 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
 		return i;
 	}
 	
-	protected String getUrl(HttpServletRequest request) {
+	protected String getUrl() {
+		HttpServletRequest request = this.getRequest();
 		String str = "";
 		try {
 			String contextPath = request.getContextPath();//项目名http://localhost:8080/firstjdbc
