@@ -65,7 +65,7 @@ public abstract class BaseServlet extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 		/**
-		 * 1. 获取method参数，它是用户想调用的方法
+		 * 1. 获取flag参数，它是用户想调用的方法
 		 */
 		String methodName = request.getParameter("flag");
 		Method method = null;
